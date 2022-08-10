@@ -1,0 +1,357 @@
+@import url('https://fonts.googleapis.com/css2?family=Archivo:wght@400;600&family=DM+Sans&family=Poppins:wght@400;600&display=swap');
+
+*{
+    margin: 0;
+    border: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'DM Sans', sans-serif;
+    font-size: 1rem;
+    font-weight: 600;
+}
+img{
+    object-fit: contain;
+}
+a{
+    text-decoration: none;
+}
+img{
+    height: 100%;
+}
+ul, li{
+    list-style: none;
+}
+
+.container-img{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.container{
+   width: 100%;
+   padding: 0 5rem;
+   margin: 1rem 0;
+   text-align: center;
+
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+  
+}
+.title{
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.75rem;
+    font-weight: 600;
+    padding: 0.2rem 0;
+}
+.subtitle{
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.4rem;
+    font-weight: 600;
+    padding: 0.2rem 0;
+}
+.button{
+    display: flex;
+    height: 3rem;
+    padding: 0.5rem 1rem;
+    border-radius: 0.35rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 2px solid #3697fb;
+    cursor: pointer;
+    
+}
+.button img{
+    width: 1.5rem;
+    margin-right: 0.5rem;
+    
+}
+.divider{
+    height: 2px;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    background: linear-gradient(
+       270deg,
+       hsla(159, 36%, 57%, 1) ,
+       hsla(159, 65%, 88%, 0.34)
+    );
+}
+
+/* ====== HEADER ===================*/
+header{
+    padding-top: 1rem;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 20% 80%;
+    grid-template-areas: 
+        "logo title" 
+        "nav nav";
+    background-color:#F0F0F7;
+    position: relative;
+    
+}
+header #text-header{
+    grid-area: title;  
+}
+header #logo{
+    grid-area: logo;
+}
+header #nav-menu{
+    grid-area: nav;
+    padding-bottom: 0.5rem;
+}
+header #nav-menu ul{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+header #nav-menu ul li{
+    margin: 0 0.5rem;
+    padding: 0.25rem;
+    border-radius: 0.2rem;
+    cursor: pointer;
+}
+header #nav-menu ul li:hover{
+    font-size: 1.05rem;
+    background-color: white;
+}
+
+/* ====== SLIDER ===================*/
+section .swiper{
+    width: 80%;
+    max-width: 1100px;
+    height: 400px;
+}
+section .swiper img{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+/* ====== ABOUT ===================*/
+
+#card-about{
+    width: 100%;
+    height: min-content;
+    padding: 1rem;
+    background-color: #F0F0F7;
+    display: flex;
+    border-radius: 0.25rem;
+}
+#img-about{
+    width: 50%;
+    height: 100%;
+    margin-right: 5%;
+}
+#img-about img{
+    width: 100%;
+    height: 100%;
+}
+#text-about{
+    width: 40%;
+    text-align: justify;
+}
+
+
+/* ====== TIMELINE ===================*/
+#timeline{
+    position: relative;
+}
+#timeline .divider{
+    background: linear-gradient(
+       -270deg,
+       hsla(159, 36%, 57%, 1) ,
+       hsla(159, 65%, 88%, 0.34)
+    );
+}
+#cards-timeline{
+    width: 80%;
+    height: min-content;
+    margin-bottom: 1rem;
+    max-height: 500px;
+    overflow-y: auto;
+    padding: 0 1rem 1rem 1rem;
+    
+    border-radius: 0.5rem;
+    background-color: #242424;
+    box-shadow: -6px -5px #3697fb;
+    
+}
+#cards-timeline h4{
+    color: #3697fb;
+    margin: 2rem 0 1rem 0;
+   
+}
+
+.card-timeline{
+    width: 100%;
+    height: min-content;
+    margin: 1rem 0;
+    padding: 0.5rem;
+
+    display: grid;
+    grid-template-columns: 25% 15% 60%;
+    grid-template-areas: "time img description";
+    border-radius: 0.2rem;
+    
+    background-color: #28282f;
+}
+.card-timeline #card-time{
+    grid-area: time;
+    display: flex;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    justify-content: start;
+    margin-left: 10px;
+}
+.card-timeline #card-time img{
+    width: 1rem;
+    margin-right: 0.2rem;
+}
+.card-timeline #card-img{
+    grid-area: img;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.card-timeline #card-img img{
+    width: 2.5rem;
+}
+.card-timeline #card-description{
+    grid-area: description;
+    height: 100%;
+    text-align: start;
+}
+.card-timeline #card-description strong{
+    color: white;
+}
+
+
+/* ====== CONTACTS =================== */
+#contact{
+    text-align: center;
+    
+}
+#contact .container{
+    flex-direction: row;
+    background-color: #F9F9F9;
+    text-align: start;
+    padding: 2rem 0;
+}
+#contact .text .title{
+    width: 60%;
+}
+#contact .links{
+    margin-left: 5%;
+    width: 35%;
+}
+#contact ul{
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+#contact li{
+    display: flex;
+    align-items: center;
+    text-align: start;
+}
+#contact li img{
+    margin-right: 0.5rem;
+}
+
+/* ====== FOOTER =================== */
+footer{
+    position: relative;
+    width: 100%;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #F0F0F7;
+   
+}
+footer .divider{
+    top: 0;
+}
+
+
+/* ====== RESPONSIVE SCREEN =================== */
+@media(max-width:720px){
+    .container{
+        padding: 0 2rem;
+    }
+    header{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        gap: 10px;
+    }
+
+    /* ======slider =====*/
+    section .swiper{
+        width: 100%;
+        height: 40vh;
+    }
+
+    /* ======about =====*/
+    #card-about{
+        flex-direction: column;
+    }
+    #img-about, #text-about{
+        width: 100%;
+    }
+    #img-about img{
+        max-height: 300px;
+    }
+
+    /* ======timeline =====*/
+    .card-timeline{
+        display: flex;
+        flex-direction: column;
+        height: min-content;
+        align-items: center;
+        justify-content: center;
+        padding: 1rem 0;
+        gap: 1rem;
+
+        
+    }
+    .card-timeline #card-time{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .card-timeline #card-description{
+        text-align: center;
+    }
+
+    /* ======contacts =====*/
+    #contact .container{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 1rem;
+        background-color: #F9F9F9;
+        text-align: start;
+        
+    }
+    #contact .links{
+        width: 100%;
+        padding: 0 8%;
+    }
+    
+ 
+    
+}
